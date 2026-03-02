@@ -23,10 +23,6 @@ class MerchantSwitcher implements MerchantSwitcherInterface
      */
     protected $merchantSwitcherClient;
 
-    /**
-     * @param \SprykerShop\Yves\MerchantSwitcherWidget\Dependency\Client\MerchantSwitcherWidgetToQuoteClientInterface $quoteClient
-     * @param \SprykerShop\Yves\MerchantSwitcherWidget\Dependency\Client\MerchantSwitcherWidgetToMerchantSwitcherClientInterface $merchantSwitcherClient
-     */
     public function __construct(
         MerchantSwitcherWidgetToQuoteClientInterface $quoteClient,
         MerchantSwitcherWidgetToMerchantSwitcherClientInterface $merchantSwitcherClient
@@ -35,11 +31,6 @@ class MerchantSwitcher implements MerchantSwitcherInterface
         $this->merchantSwitcherClient = $merchantSwitcherClient;
     }
 
-    /**
-     * @param string|null $merchantReference
-     *
-     * @return void
-     */
     public function switchMerchantInQuote(?string $merchantReference): void
     {
         $quoteTransfer = $this->quoteClient->getQuote();

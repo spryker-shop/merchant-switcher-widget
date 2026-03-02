@@ -44,9 +44,6 @@ class SelectedMerchantCookie implements SelectedMerchantCookieInterface
         $this->merchantSwitcherWidgetConfig = $merchantSwitcherWidgetConfig;
     }
 
-    /**
-     * @return string
-     */
     public function getMerchantReference(): string
     {
         $request = $this->requestStack->getCurrentRequest();
@@ -57,11 +54,6 @@ class SelectedMerchantCookie implements SelectedMerchantCookieInterface
         return (string)$request->cookies->get($this->merchantSwitcherWidgetConfig->getMerchantSelectorCookieIdentifier(), '');
     }
 
-    /**
-     * @param string|null $selectedMerchantReference
-     *
-     * @return void
-     */
     public function setMerchantReference(?string $selectedMerchantReference): void
     {
         $this->cookies->append(Cookie::create(
@@ -71,9 +63,6 @@ class SelectedMerchantCookie implements SelectedMerchantCookieInterface
         ));
     }
 
-    /**
-     * @return void
-     */
     public function removeMerchantReference(): void
     {
         $this->cookies->append(Cookie::create(

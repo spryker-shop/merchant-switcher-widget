@@ -9,10 +9,5 @@ namespace SprykerShop\Yves\MerchantSwitcherWidget\MerchantSwitcher;
 
 interface MerchantSwitcherInterface
 {
-    /**
-     * @param string|null $merchantReference
-     *
-     * @return void
-     */
     public function switchMerchantInQuote(?string $merchantReference): void;
 }

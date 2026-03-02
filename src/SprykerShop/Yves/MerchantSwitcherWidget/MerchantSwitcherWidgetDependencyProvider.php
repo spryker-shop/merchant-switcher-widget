@@ -63,11 +63,6 @@ class MerchantSwitcherWidgetDependencyProvider extends AbstractBundleDependencyP
      */
     public const SERVICE_REQUEST_STACK = 'request_stack';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -82,11 +77,6 @@ class MerchantSwitcherWidgetDependencyProvider extends AbstractBundleDependencyP
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addMerchantSearchClient(Container $container): Container
     {
         $container->set(static::CLIENT_MERCHANT_SEARCH, function (Container $container) {
@@ -96,11 +86,6 @@ class MerchantSwitcherWidgetDependencyProvider extends AbstractBundleDependencyP
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addRequestStack(Container $container): Container
     {
         $container->set(static::SERVICE_REQUEST_STACK, function (ContainerInterface $container) {
@@ -110,11 +95,6 @@ class MerchantSwitcherWidgetDependencyProvider extends AbstractBundleDependencyP
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCookies(Container $container): Container
     {
         $container->set(static::SERVICE_COOKIES, function (ContainerInterface $container) {
@@ -142,11 +122,6 @@ class MerchantSwitcherWidgetDependencyProvider extends AbstractBundleDependencyP
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addQuoteClient(Container $container): Container
     {
         $container->set(static::CLIENT_QUOTE, function (Container $container) {
@@ -156,11 +131,6 @@ class MerchantSwitcherWidgetDependencyProvider extends AbstractBundleDependencyP
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addMerchantSwitcherClient(Container $container): Container
     {
         $container->set(static::CLIENT_MERCHANT_SWITCHER, function (Container $container) {

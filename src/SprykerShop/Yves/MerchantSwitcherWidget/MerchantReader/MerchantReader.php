@@ -37,11 +37,6 @@ class MerchantReader implements MerchantReaderInterface
      */
     protected $merchantSwitcher;
 
-    /**
-     * @param \SprykerShop\Yves\MerchantSwitcherWidget\Dependency\Client\MerchantSwitcherWidgetToMerchantSearchClientInterface $merchantSearchClient
-     * @param \SprykerShop\Yves\MerchantSwitcherWidget\Cookie\SelectedMerchantCookieInterface $selectedMerchantCookie
-     * @param \SprykerShop\Yves\MerchantSwitcherWidget\MerchantSwitcher\MerchantSwitcherInterface $merchantSwitcher
-     */
     public function __construct(
         MerchantSwitcherWidgetToMerchantSearchClientInterface $merchantSearchClient,
         SelectedMerchantCookieInterface $selectedMerchantCookie,
@@ -52,9 +47,6 @@ class MerchantReader implements MerchantReaderInterface
         $this->merchantSwitcher = $merchantSwitcher;
     }
 
-    /**
-     * @return string|null
-     */
     public function extractSelectedMerchantReference(): ?string
     {
         $selectedMerchantReference = $this->selectedMerchantCookie->getMerchantReference();

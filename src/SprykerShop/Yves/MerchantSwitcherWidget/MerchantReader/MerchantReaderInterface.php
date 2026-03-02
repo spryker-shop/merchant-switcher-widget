@@ -11,9 +11,6 @@ use ArrayObject;
 
 interface MerchantReaderInterface
 {
-    /**
-     * @return string|null
-     */
     public function extractSelectedMerchantReference(): ?string;
 
     /**

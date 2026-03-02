@@ -18,11 +18,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class MerchantSwitcherController extends AbstractController
 {
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     public function switchMerchantAction(Request $request): Response
     {
         $form = $this->getFactory()->getMerchantSwitcherSelectorForm()->handleRequest($request);

@@ -24,25 +24,16 @@ class MerchantSwitcherSelectorFormWidget extends AbstractWidget
         $this->addMerchantParameters();
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'MerchantSwitcherSelectorFormWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@MerchantSwitcherWidget/views/merchant-switcher-selector-form-widget/merchant-switcher-selector-form-widget.twig';
     }
 
-    /**
-     * @return void
-     */
     protected function addMerchantParameters(): void
     {
         $merchantReader = $this->getFactory()->createMerchantReader();
