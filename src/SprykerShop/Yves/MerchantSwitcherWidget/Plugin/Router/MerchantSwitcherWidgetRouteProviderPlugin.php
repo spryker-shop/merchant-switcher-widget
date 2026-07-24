@@ -25,14 +25,10 @@ class MerchantSwitcherWidgetRouteProviderPlugin extends AbstractRouteProviderPlu
     public const ROUTE_NAME_SWITCH_MERCHANT = 'switch-merchant';
 
     /**
-     * Specification:
+     * {@inheritDoc}
      * - Adds Routes to the RouteCollection.
      *
      * @api
-     *
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
      */
     public function addRoutes(RouteCollection $routeCollection): RouteCollection
     {
