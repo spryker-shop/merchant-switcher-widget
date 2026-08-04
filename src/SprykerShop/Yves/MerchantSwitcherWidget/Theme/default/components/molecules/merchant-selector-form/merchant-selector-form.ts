@@ -9,8 +9,6 @@ export default class MerchantSelectorForm extends Component {
     protected message: string;
     protected initiallySelectedIndex: number;
 
-    protected readyCallback(): void {}
-
     protected init(): void {
         this.ajaxProvider = <AjaxProvider>this.getElementsByClassName(`${this.jsName}__provider`)[0];
         this.form = <HTMLFormElement>this.getElementsByClassName(`${this.jsName}__form`)[0];
